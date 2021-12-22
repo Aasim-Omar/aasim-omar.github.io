@@ -5,18 +5,22 @@
       <router-link to="/" @click="calcAll">
         <div class="icon-user icon"></div>
         <div>Home</div>
+        <div class="overlay"></div>
       </router-link>
       <router-link to="/skills" @click="calcAll">
         <div class="icon-chart-bar icon"></div>
         <div>Skills</div>
+        <div class="overlay"></div>
       </router-link>
       <router-link to="/portfolio" @click="calcAll">
         <div class="icon-code icon"></div>
         <div>Portfolio</div>
+        <div class="overlay"></div>
       </router-link>
       <router-link to="/contact" @click="calcAll">
         <div class="icon-at icon"></div>
         <div>Contact</div>
+        <div class="overlay"></div>
       </router-link>
     </div>
   </div>
@@ -31,7 +35,8 @@ export default {
     const indicator = ref(null)
 
     let calcAll = (el) => {
-      indicator.value.style.top = `${el.target.offsetTop}px`
+      // console.log(el.target.parentElement.offsetTop);
+      indicator.value.style.top = `${el.target.parentElement.offsetTop}px`
     }
 
     return { indicator, calcAll }
@@ -78,6 +83,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   padding: 0 10px;
+  width: 100%;
   height: 70px;
   font-size: 1.1rem;
   margin: 10px 0;
@@ -86,6 +92,15 @@ export default {
   border-radius: 10px;
   transition: all 0.3s ease;
   position: relative;
+}
+
+#nav .links a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
 }
 
 #nav .links a .icon {
