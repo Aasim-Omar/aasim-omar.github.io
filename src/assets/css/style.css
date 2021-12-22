@@ -1,7 +1,14 @@
+/* Variables */
+:root {
+  --firstColor: #001e26;
+  --secondColor: #012a35;
+  --therdColor: #22bd88;
+}
+
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  background-color: #001e26;
+  background-color: var(--firstColor);
 }

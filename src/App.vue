@@ -1,6 +1,7 @@
 <template>
-  <Sidebar />
-  <div style="margin-left: 300px">
+  <Sidebar v-if="largeScreen"/>
+  <Smallbar v-else/>
+  <div id="router-container">
     <router-view />
   </div>
 </template>
@@ -11,13 +12,31 @@
   text-align: center;
   color: #fff;
 }
+
+#router-container {
+  /* margin-left: 250px; */
+}
 </style>
 
 <script>
 import Sidebar from "@/components/Sidebar.vue";
+import Smallbar from "@/components/Smallbar.vue";
 export default {
+  data () {
+    return {
+      largeScreen: false,
+    }
+  },
   components: {
     Sidebar,
+    Smallbar,
+  },
+  mounted () {
+    if (window.innerWidth > 767) {
+      this.largeScreen = true;
+    } else {
+      this.largeScreen = false;
+    }
   },
 };
 </script>
