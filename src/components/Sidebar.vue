@@ -5,22 +5,18 @@
       <router-link to="/" @click="moveIndicator">
         <div class="icon-user icon"></div>
         <div>Home</div>
-        <div class="overlay"></div>
       </router-link>
       <router-link to="/skills" @click="moveIndicator">
         <div class="icon-chart-bar icon"></div>
         <div>Skills</div>
-        <div class="overlay"></div>
       </router-link>
       <router-link to="/portfolio" @click="moveIndicator">
         <div class="icon-code icon"></div>
         <div>Portfolio</div>
-        <div class="overlay"></div>
       </router-link>
       <router-link to="/contact" @click="moveIndicator">
         <div class="icon-at icon"></div>
         <div>Contact</div>
-        <div class="overlay"></div>
       </router-link>
     </div>
   </div>
@@ -34,8 +30,12 @@ export default {
   setup () {
     const indicator = ref(null)
 
-    let moveIndicator = (el) => {
-      indicator.value.style.top = `${el.target.parentElement.offsetTop}px`
+    let moveIndicator = (e) => {
+      if (e.target.parentElement.nodeName == "A") {
+        indicator.value.style.top = `${e.target.parentElement.offsetTop}px`
+      } else {
+        indicator.value.style.top = `${e.target.offsetTop}px`
+      }
     }
 
     return { indicator, moveIndicator }
@@ -67,7 +67,7 @@ export default {
 
 #nav .links .indicator {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 0;
   width: 100%;
   height: 70px;
@@ -89,15 +89,6 @@ export default {
   border-radius: 10px;
   transition: all 0.3s ease;
   position: relative;
-}
-
-#nav .links a .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
 }
 
 #nav .links a .icon {
