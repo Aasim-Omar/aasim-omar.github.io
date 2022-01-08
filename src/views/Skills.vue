@@ -1,6 +1,6 @@
 <template>
   <div class="skills main-box">
-    <h1>My Skills :</h1>
+    <h1 class="main-head">My Skills :</h1>
     <div class="skill-box">
       <h2>Basic Skills:</h2>
       <p>Html</p>
@@ -52,10 +52,6 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  width: fit-content;
-  border-bottom: 2px solid #fff;
-}
 .skill-box {
   margin: 10px 0;
   padding: 5px;

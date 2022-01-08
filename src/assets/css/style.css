@@ -14,10 +14,18 @@ body {
   background-color: var(--firstColor);
 }
 
+ul {
+  list-style: none;
+}
+
 .main-box {
   border: 4px solid var(--therdColor);
   margin: 100px;
   padding: 50px;
   text-align: left;
   box-shadow: 0 0 15px var(--therdColor);
+}
+.main-box .main-head {
+  width: fit-content;
+  border-bottom: 2px solid #fff;
 }
