@@ -26,6 +26,17 @@ ul li {
   border-radius: 10px;
   transition: all 0.2s linear;
 }
+@media (max-width: 600px) {
+  .main-box {
+    padding: 30px 10px;
+  }
+  ul li {
+    width: 49%;
+  }
+  ul li a {
+    padding: 0;
+  }
+}
 ul li:hover {
   box-shadow: 0 0 5px var(--therdColor);
 }
@@ -58,13 +69,13 @@ export default {
         {
           href: "https://mail.google.com",
           icon: "icon-mail",
-          label: "My Email",
-          link: "aasim.omar7@gmail.com",
+          label: "My Gmail",
+          link: "aasim.omar7",
         },
         {
           href: "https://www.linkedin.com/in/AasimOmar/",
           icon: "icon-linkedin",
-          label: "Linkedin Account",
+          label: "Linkedin",
           link: "@AasimOmar",
         },
         {
@@ -76,7 +87,7 @@ export default {
         {
           href: "https://www.github.com/Aasim-Omar",
           icon: "icon-github",
-          label: "Github Account",
+          label: "Github",
           link: "@Aasim-Omar",
         },
         {

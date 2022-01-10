@@ -25,6 +25,13 @@ ul {
   text-align: left;
   box-shadow: 0 0 15px var(--therdColor);
 }
+@media (max-width: 600px) {
+  .main-box {
+    margin: 40px 10px;
+    margin-bottom: 120px;
+    padding: 20px;
+  }
+}
 .main-box .main-head {
   width: fit-content;
   border-bottom: 2px solid #fff;

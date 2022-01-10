@@ -21,6 +21,21 @@
         <a href="https://github.com/Aasim-Omar/Elitecorp-Template" target="_blank">View Source</a>
       </div>
     </div>
+    <div class="portfolio-box">
+      <h2>Javascript Todo</h2>
+      <p>Javascript Todo With Modren Feature, like Sync Your Data In Browser</p>
+      <h3>The Technolgy Used in This Template is:</h3>
+      <ul>
+        <li>Html</li>
+        <li>Css3</li>
+        <li>Javascript</li>
+      </ul>
+      <p>And This App Support Local Storage Sync</p>
+      <div class="buttons">
+        <a href="https://aasim-omar.github.io/javascript-todo" target="_blank">Preview</a>
+        <a href="https://github.com/Aasim-Omar/javascript-todo" target="_blank">View Source</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -48,19 +63,37 @@
 .portfolio-box ul li {
   line-height: 1.7;
 }
-.portfolio-box .buttons {
+.portfolio-box .buttons,
+.portfolio-box p {
   margin: 15px 0;
 }
 .portfolio-box .buttons a {
   display: inline-block;
   padding: 10px 20px;
   border: 1px solid var(--therdColor);
-  margin-right: 10px;
+  margin: 0px 10px 5px 0;
   color: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 .portfolio-box .buttons a:hover {
   background-color: var(--therdColor);
+}
+@media (max-width: 600px) {
+  .main-box {
+    padding: 15px 10px;
+  }
+  .portfolio-box {
+    padding: 10px;
+  }
+  .portfolio-box p {
+    line-height: 1.7;
+  }
+  .portfolio-box h2 {
+    text-decoration: none;
+  }
+  .portfolio-box h3 {
+    font-size: 16px;
+  }
 }
 </style>

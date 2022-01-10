@@ -47,4 +47,10 @@ main p {
   margin: 0;
   line-height: 1.7;
 }
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 30px;
+  }
+}
 </style>
