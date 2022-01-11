@@ -95,5 +95,8 @@
   .portfolio-box h3 {
     font-size: 16px;
   }
+  .portfolio-box .buttons a {
+    padding: 10px;
+  }
 }
 </style>

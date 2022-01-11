@@ -67,6 +67,7 @@ export default {
   font-size: 18px;
   padding: 2px 0;
   padding-left: 15px;
+  letter-spacing: 2px;
   position: relative;
 }
 .skill-box p::before {
@@ -79,5 +80,14 @@ export default {
   transform: translateY(-50%);
   background-color: var(--therdColor);
   border-radius: 50%;
+}
+@media (max-width: 600px) {
+  .skill-box h2 {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .skill-box p {
+    line-height: 1.5;
+  }
 }
 </style>
