@@ -26,7 +26,6 @@ export default {
 
 <style scoped>
 header h1 {
-  font-size: 4rem;
   letter-spacing: 0.25rem;
   margin-top: 0;
   margin-bottom: 10px;
@@ -51,6 +50,16 @@ main p {
 @media (max-width: 600px) {
   header h1 {
     font-size: 30px;
+  }
+}
+@media (min-width: 601px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  header h1 {
+    font-size: 4rem;
   }
 }
 </style>
